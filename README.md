@@ -24,5 +24,30 @@ unzip ml-1m.zip</code>
 
 hadoop fs -cat recommendations/part-r-00000 | head</code>
 
-<h2>Building a Recommender</h2><br>
+<br><h2>Building a Recommender</h2>
+<h3>Get Twisted, and Klein and Redis modules for Python.</h3>
+<code>sudo pip3 install twisted
+sudo pip3 install klein
+sudo pip3 install redis</code>
+
+
+<h3>Install Redis and start up the server.</h3>
+<code>wget http://download.redis.io/releases/redis-2.8.7.tar.gz
+tar xzf redis-2.8.7.tar.gz
+cd redis-2.8.7
+make
+./src/redis-server &</code>
+
+
+<h3>Build a web service that pulls the recommendations into Redis and responds to queries.
+Put the above bda.py content into python file.</h3>
+
+<h3>Start the web service.</h3>
+<code>twistd -noy <your_file_name>.py &</code>
+  
+<h3>Test the web service with user id “37”</h3>
+<code>curl localhost:8083/37</code>
+
+
+
 
