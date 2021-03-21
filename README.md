@@ -35,11 +35,11 @@ sudo pip3 install twisted</code>
 
 
 <h3>Install Redis and start up the server.</h3>
-<code>wget http://download.redis.io/releases/redis-2.8.7.tar.gz
-tar xzf redis-2.8.7.tar.gz
-cd redis-2.8.7
-make
-./src/redis-server &</code>
+<code>wget http://download.redis.io/releases/redis-2.8.7.tar.gz</code>
+      <code>  tar xzf redis-2.8.7.tar.gz</code>
+      <code>  cd redis-2.8.7</code>
+      <code>  make</code>
+      <code>  ./src/redis-server &</code></code>
 
 
 <h3>Build a web service that pulls the recommendations into Redis and responds to queries.
