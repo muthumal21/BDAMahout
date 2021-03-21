@@ -26,7 +26,8 @@ hadoop fs -cat recommendations/part-r-00000 | head</code>
 
 <br><h2>Building a Recommender</h2>
 <h3>Get Twisted, and Klein and Redis modules for Python.</h3>
-<code>sudo pip3 install twisted
+<code>
+sudo pip3 install twisted
   
 sudo pip3 install klein
 
